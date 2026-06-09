@@ -1,0 +1,55 @@
+{
+  "name": "@a5c-ai/atlas-omp",
+  "version": "5.0.1-staging.28347f861706",
+  "type": "module",
+  "description": "Turn a stated need into a full system design by mining the Atlas knowledge graph. — oh-my-pi",
+  "keywords": [
+    "oh-my-pi",
+    "atlas",
+    "orchestration"
+  ],
+  "omp": {
+    "extensions": [
+      "./extensions"
+    ],
+    "skills": [
+      "./skills"
+    ]
+  },
+  "peerDependencies": {
+    "@oh-my-pi/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "test": "node --test test/integration.test.js && node test/packaged-install.test.cjs",
+    "validate:ci": "npm test",
+    "deploy": "npm publish --access public",
+    "deploy:staging": "npm publish --access public --tag staging"
+  },
+  "bin": {
+    "atlas-omp": "bin/cli.cjs"
+  },
+  "files": [
+    "bin/",
+    "package.json",
+    "versions.json",
+    "README.md",
+    "AGENTS.md",
+    "extensions/",
+    "skills/",
+    "commands/",
+    "scripts/"
+  ],
+  "author": "a5c.ai",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a5c-ai/atlas-omp.git"
+  },
+  "homepage": "https://github.com/a5c-ai/atlas-omp#readme",
+  "bugs": {
+    "url": "https://github.com/a5c-ai/atlas-omp/issues"
+  }
+}
